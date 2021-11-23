@@ -17,6 +17,7 @@ public class WishMessageGenerator {
 	
 	//Business Method
 	public String generateWishMessage(String user) {
+		System.out.println("WishMessageGenerator.generateWishMessage()");
 		//Get current hour of the day
 		int hour = calendar.get(Calendar.HOUR_OF_DAY);
 		
