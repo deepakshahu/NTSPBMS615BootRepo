@@ -27,7 +27,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 
 		try (//Get Pooled JDBC Connection object
 				Connection con = ds.getConnection();
-				//Create Statement object
+				//Create PreparedStatement object
 				PreparedStatement ps = con.prepareStatement(GET_EMPS_BY_DEGS);
 				){
 			//Set query parameter values
