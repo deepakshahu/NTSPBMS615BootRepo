@@ -8,8 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.nit.controller.PayrollSystemController;
@@ -33,7 +35,11 @@ public class BootProj09MiniProjectProfilesAppApplication {
 	public static void main(String[] args) {
 
 		//Get IOC Container
-		ApplicationContext ctx = SpringApplication.run(BootProj09MiniProjectProfilesAppApplication.class, args);
+		//ApplicationContext ctx = SpringApplication.run(BootProj09MiniProjectProfilesAppApplication.class, args);
+		//In Spring boot style activating profiles using programmatic approach
+		SpringApplication application = new SpringApplication(BootProj09MiniProjectProfilesAppApplication.class);
+		//application.setAdditionalProfiles("test","dev");
+		ApplicationContext ctx = application.run(args);
 
 		//Get Controller class object
 		PayrollSystemController controller = ctx.getBean("controller",PayrollSystemController.class);
