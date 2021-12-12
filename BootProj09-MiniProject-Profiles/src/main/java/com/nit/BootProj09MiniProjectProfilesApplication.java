@@ -18,7 +18,7 @@ import com.nit.controller.PayrollSystemController;
 import com.nit.model.Employee;
 
 @SpringBootApplication
-public class BootProj09MiniProjectProfilesAppApplication {
+public class BootProj09MiniProjectProfilesApplication {
 	
 	@Bean(name="c3p0Ds")
 	@Profile("uat")
@@ -37,7 +37,7 @@ public class BootProj09MiniProjectProfilesAppApplication {
 		//Get IOC Container
 		//ApplicationContext ctx = SpringApplication.run(BootProj09MiniProjectProfilesAppApplication.class, args);
 		//In Spring boot style activating profiles using programmatic approach
-		SpringApplication application = new SpringApplication(BootProj09MiniProjectProfilesAppApplication.class);
+		SpringApplication application = new SpringApplication(BootProj09MiniProjectProfilesApplication.class);
 		//application.setAdditionalProfiles("test","dev");
 		ApplicationContext ctx = application.run(args);
 
