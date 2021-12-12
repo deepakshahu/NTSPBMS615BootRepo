@@ -16,7 +16,8 @@ import org.springframework.stereotype.Repository;
 import com.nit.model.Employee;
 
 @Repository("oraEmpDAO")
-@Profile({"uat","prod"})
+//@Profile({"uat","prod","default"})
+@Profile({"default"})
 public class OracleEmployeeDAOImpl implements IEmployeeDAO {
 	private static final String GET_EMPS_BY_DEGS="SELECT EMPNO,ENAME,JOB,SAL FROM EMP WHERE JOB IN (?,?,?) ORDER BY JOB";
 	@Autowired
