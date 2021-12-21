@@ -75,5 +75,4 @@ public class BootProj14RunnersLambdaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BootProj14RunnersLambdaApplication.class, args);
 	}
-
 }
