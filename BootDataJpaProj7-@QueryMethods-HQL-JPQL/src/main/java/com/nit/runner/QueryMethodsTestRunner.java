@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import com.nit.model.Movie;
 import com.nit.repository.IMovieRepo;
 
-@Component
+//@Component
 public class QueryMethodsTestRunner implements CommandLineRunner {
 	@Autowired
 	private IMovieRepo repo;  //InMemory proxy class obj of our repository(I) will be injected
