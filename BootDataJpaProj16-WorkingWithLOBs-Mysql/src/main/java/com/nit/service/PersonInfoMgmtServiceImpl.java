@@ -1,6 +1,6 @@
 package com.nit.service;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,10 +18,14 @@ public class PersonInfoMgmtServiceImpl implements IPersonInfoMgmtService {
 	public String registerPerson(PersonInfo info) {
 		return repo.save(info).getPid()+" id person is saved";
 	}
-
+	
 	@Override
-	public List<PersonInfo> fetchAllPersonDetails() {
-		return repo.findAll();
+	public PersonInfo fetchPersonDetailsById(int pid) {
+		Optional<PersonInfo> opt = repo.findById(pid);
+		if(opt.isPresent())
+			return opt.get();
+		else
+			return null;
 	}
 
 }
