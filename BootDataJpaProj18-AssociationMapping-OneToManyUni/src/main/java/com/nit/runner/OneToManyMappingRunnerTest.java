@@ -17,19 +17,19 @@ public class OneToManyMappingRunnerTest implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//Prepare child objects
+		/*//Prepare child objects
 		PhoneNumber ph = new PhoneNumber();
-		ph.setContactNo(99999999999L);
+		ph.setContactNo(7777777777L);
 		ph.setNumberType("Office");
-		ph.setProvider("Airtel");
+		ph.setProvider("BSNL");
 		PhoneNumber ph1 = new PhoneNumber();
-		ph1.setContactNo(8888888888L);
+		ph1.setContactNo(6666666666L);
 		ph1.setNumberType("Residence");
-		ph1.setProvider("VI");
+		ph1.setProvider("Jio");
 		//Prepare parent object
 		Person per = new Person();
-		per.setPname("Deepak");
-		per.setPaddrs("Mumbai");
+		per.setPname("Suraj");
+		per.setPaddrs("Pune");
 		per.setPhonesInfo(Set.of(ph,ph1));
 		try {
 			//Invoke the method
@@ -37,6 +37,15 @@ public class OneToManyMappingRunnerTest implements CommandLineRunner {
 		}//try
 		catch(Exception e) {
 			e.printStackTrace();
-		}
+		}*/
+
+		//Call service class method for loading object
+		//service.loadDataUsingParent();
+
+		//Call service class method for deleting object
+		//service.deleteParentAndItsChilds(1001);
+		
+		//Call service class method for deleting all PhoneNumbers of a Person
+		service.deleteAllPhoneNumbersOfAPerson(1000);
 	}//run
 }//class

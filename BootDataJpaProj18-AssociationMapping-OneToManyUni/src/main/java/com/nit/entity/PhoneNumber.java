@@ -32,4 +32,8 @@ public class PhoneNumber implements Serializable{
 		return "PhoneNumber(child) [regNo=" + regNo + ", phoneNumber=" + contactNo + ", numberType=" + numberType
 				+ ", provider=" + provider + "]";
 	}
+	
+	public PhoneNumber() {
+		System.out.println("PhoneNumber :: 0-param constructor");
+	}
 }
