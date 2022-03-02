@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BootDataJpaProj5FinderMethodsStaticProjectionsApplication {
+public class BootDataJpaProj05FinderMethodsStaticProjectionsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootDataJpaProj5FinderMethodsStaticProjectionsApplication.class, args);
+		SpringApplication.run(BootDataJpaProj05FinderMethodsStaticProjectionsApplication.class, args);
 	}
 }
